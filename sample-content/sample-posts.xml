@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- WordPress eXtended RSS (WXR) サンプルコンテンツ
+     WordPressの「ツール」>「インポート」>「WordPress」から読み込んでください -->
+<rss version="2.0"
+    xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
+    xmlns:content="http://purl.org/rss/1.0/modules/content/"
+    xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:wp="http://wordpress.org/export/1.2/">
+
+<channel>
+    <title>北九州スポーツ整骨院ブログ</title>
+    <link>https://your-domain.com</link>
+    <description>北九州スポーツ整骨院の公式ブログ</description>
+    <language>ja</language>
+    <wp:wxr_version>1.2</wp:wxr_version>
+    <wp:base_site_url>https://your-domain.com</wp:base_site_url>
+    <wp:base_blog_url>https://your-domain.com</wp:base_blog_url>
+
+    <!-- カテゴリー定義 -->
+    <wp:category>
+        <wp:term_id>1</wp:term_id>
+        <wp:category_nicename>sports-injury</wp:category_nicename>
+        <wp:category_parent></wp:category_parent>
+        <wp:cat_name><![CDATA[スポーツ障害]]></wp:cat_name>
+        <wp:category_description><![CDATA[スポーツ中のケガ・障害に関する情報を発信します]]></wp:category_description>
+    </wp:category>
+    <wp:category>
+        <wp:term_id>2</wp:term_id>
+        <wp:category_nicename>back-pain</wp:category_nicename>
+        <wp:category_parent></wp:category_parent>
+        <wp:cat_name><![CDATA[腰痛・肩こり]]></wp:cat_name>
+        <wp:category_description><![CDATA[日常的な腰痛・肩こりの原因と対策を解説します]]></wp:category_description>
+    </wp:category>
+    <wp:category>
+        <wp:term_id>3</wp:term_id>
+        <wp:category_nicename>treatment</wp:category_nicename>
+        <wp:category_parent></wp:category_parent>
+        <wp:cat_name><![CDATA[施術・ケア方法]]></wp:cat_name>
+        <wp:category_description><![CDATA[整骨院での施術内容とセルフケア方法を紹介します]]></wp:category_description>
+    </wp:category>
+    <wp:category>
+        <wp:term_id>4</wp:term_id>
+        <wp:category_nicename>supplement</wp:category_nicename>
+        <wp:category_parent></wp:category_parent>
+        <wp:cat_name><![CDATA[サプリメント]]></wp:cat_name>
+        <wp:category_description><![CDATA[スポーツ・健康に役立つサプリメントのレビューと比較]]></wp:category_description>
+    </wp:category>
+    <wp:category>
+        <wp:term_id>5</wp:term_id>
+        <wp:category_nicename>sports-goods</wp:category_nicename>
+        <wp:category_parent></wp:category_parent>
+        <wp:cat_name><![CDATA[スポーツ用品]]></wp:cat_name>
+        <wp:category_description><![CDATA[整骨院スタッフが推薦するスポーツ用品・グッズ]]></wp:category_description>
+    </wp:category>
+    <wp:category>
+        <wp:term_id>6</wp:term_id>
+        <wp:category_nicename>affiliate</wp:category_nicename>
+        <wp:category_parent></wp:category_parent>
+        <wp:cat_name><![CDATA[おすすめ商品]]></wp:cat_name>
+        <wp:category_description><![CDATA[整骨院スタッフが実際に試したおすすめ商品まとめ]]></wp:category_description>
+    </wp:category>
+    <wp:category>
+        <wp:term_id>7</wp:term_id>
+        <wp:category_nicename>column</wp:category_nicename>
+        <wp:category_parent></wp:category_parent>
+        <wp:cat_name><![CDATA[コラム]]></wp:cat_name>
+        <wp:category_description><![CDATA[健康・スポーツに関するコラム記事]]></wp:category_description>
+    </wp:category>
+
+    <!-- ===== 記事1: 腰痛サポーターランキング ===== -->
+    <item>
+        <title>【2024年最新】腰痛サポーターおすすめランキング5選｜整骨院スタッフが徹底比較</title>
+        <link>https://your-domain.com/back-pain-supporter-ranking/</link>
+        <pubDate>Mon, 01 Apr 2024 09:00:00 +0900</pubDate>
+        <dc:creator><![CDATA[北九州スポーツ整骨院]]></dc:creator>
+        <category domain="category" nicename="back-pain"><![CDATA[腰痛・肩こり]]></category>
+        <category domain="category" nicename="affiliate"><![CDATA[おすすめ商品]]></category>
+        <wp:post_date><![CDATA[2024-04-01 09:00:00]]></wp:post_date>
+        <wp:post_status><![CDATA[publish]]></wp:post_status>
+        <wp:post_type><![CDATA[post]]></wp:post_type>
+        <wp:post_name><![CDATA[back-pain-supporter-ranking]]></wp:post_name>
+        <excerpt:encoded><![CDATA[整骨院スタッフが実際に試した腰痛サポーターを徹底比較。腰痛の種類別におすすめ商品を紹介します。バンテリン・ザムスト・ZAMST・コルセットなど人気ブランドを比較検討。]]></excerpt:encoded>
+        <content:encoded><![CDATA[
+<p>こんにちは、北九州スポーツ整骨院のスタッフです。</p>
+
+<p>「腰痛サポーターって実際どれがいいの？」という質問を患者さんから毎日のようにいただきます。そこで今回は、整骨院で実際に患者さんに使用を勧めてきた腰痛サポーターを、プロの視点から徹底比較します。</p>
+
+[kitaspo_notice type="info"]この記事では整骨院スタッフが実際に試した商品のみを紹介しています。アフィリエイトリンクを含む場合があります。[/kitaspo_notice]
+
+<h2>腰痛サポーターを選ぶ前に知っておくこと</h2>
+
+<p>腰痛サポーターには大きく2種類あります。</p>
+
+<ul>
+<li><strong>コルセット型</strong>：腰椎をしっかり固定。椎間板ヘルニアや腰椎すべり症の方に向いています。</li>
+<li><strong>サポーター型</strong>：適度なサポートで動きを妨げにくい。スポーツ中の腰痛予防に最適。</li>
+</ul>
+
+<p>ご自身の症状に合わせた選択が重要です。</p>
+
+<h2>【ランキング】腰痛サポーターおすすめ5選</h2>
+
+<h3>第1位：バンテリンコーワサポーター 腰用</h3>
+
+[kitaspo_product name="バンテリンコーワサポーター 腰用" price="¥3,280（Lサイズ）" emoji="🥇" desc="腰全体をしっかりサポートし、痛みを和らげます。通気性も良く長時間の使用でも蒸れにくい。" score="5" url="#"]
+
+<p>当院でも最も多くの患者さんにご利用いただいているサポーターです。独自の波状設計が腰全体を包み込み、しっかりとしたサポート力を発揮します。</p>
+
+<p><strong>こんな方におすすめ：</strong></p>
+<ul>
+<li>慢性的な腰痛に悩んでいる方</li>
+<li>デスクワークで長時間座っている方</li>
+<li>介護・看護などで腰に負担がかかる職業の方</li>
+</ul>
+
+[kitaspo_btn url="#" text="Amazonで価格を確認する" color="gold" icon="🛒"]
+
+<h3>第2位：ZAMST（ザムスト）ZW-5</h3>
+
+[kitaspo_product name="ZAMST ZW-5 腰用サポーター" price="¥6,600" emoji="🥈" desc="プロスポーツ選手も愛用するZAMSTの腰用サポーター。高強度の固定力でスポーツ中にも最適。" score="5" url="#"]
+
+[kitaspo_btn url="#" text="Amazonで価格を確認する" color="blue" icon="🛒"]
+
+<h3>第3位：コーナン腰サポートベルト</h3>
+
+[kitaspo_product name="腰サポートベルト（コスパ重視）" price="¥1,980" emoji="🥉" desc="コスパ重視の方に。基本的なサポート機能はしっかり備えています。" score="3" url="#"]
+
+[kitaspo_btn url="#" text="Amazonで価格を確認する" color="green" icon="🛒"]
+
+<h2>サポーターの正しい使い方</h2>
+
+<p>サポーターは着け方を間違えると効果が半減します。当院スタッフが推奨する着け方をご紹介します。</p>
+
+<ol>
+<li>まず患部（痛みのある場所）を確認する</li>
+<li>サポーターを腰の高さに合わせて巻く</li>
+<li>きつすぎず、ゆるすぎず「しっかり支えられている」感覚に調整</li>
+<li>長時間（3時間以上）の連続使用は避ける</li>
+</ol>
+
+[kitaspo_notice type="warning"]サポーターはあくまで補助的なケアです。痛みが強い場合や長期間続く場合は、必ず整骨院・医療機関にご相談ください。[/kitaspo_notice]
+
+<h2>まとめ</h2>
+
+[kitaspo_review score="4.8" title="腰痛サポーター選び 総合評価"]
+
+<p>腰痛サポーター選びは、症状・目的・予算に合わせることが大切です。本記事で紹介した商品はいずれも当院スタッフが実際に試したものですので、ぜひ参考にしてください。</p>
+
+<p>腰痛でお悩みの方は、ぜひ北九州スポーツ整骨院にご相談ください。根本原因を特定し、最適な施術プランをご提案します。</p>
+
+[kitaspo_btn url="#" text="無料相談はこちら" color="red" icon="📞"]
+        ]]></content:encoded>
+    </item>
+
+    <!-- ===== 記事2: 野球肘 ===== -->
+    <item>
+        <title>野球肘（内側上顆炎）の原因・症状・治し方｜早期回復のポイントを整骨院が解説</title>
+        <link>https://your-domain.com/baseball-elbow-treatment/</link>
+        <pubDate>Wed, 10 Apr 2024 09:00:00 +0900</pubDate>
+        <dc:creator><![CDATA[北九州スポーツ整骨院]]></dc:creator>
+        <category domain="category" nicename="sports-injury"><![CDATA[スポーツ障害]]></category>
+        <wp:post_date><![CDATA[2024-04-10 09:00:00]]></wp:post_date>
+        <wp:post_status><![CDATA[publish]]></wp:post_status>
+        <wp:post_type><![CDATA[post]]></wp:post_type>
+        <wp:post_name><![CDATA[baseball-elbow-treatment]]></wp:post_name>
+        <excerpt:encoded><![CDATA[野球肘（内側上顆炎）で悩む選手・保護者の方へ。整骨院スタッフが原因・症状・回復期間・自宅でできるセルフケアまで徹底解説します。]]></excerpt:encoded>
+        <content:encoded><![CDATA[
+<p>野球やソフトボールをしているお子さんが「肘が痛い」と言い出したら、それは野球肘のサインかもしれません。</p>
+
+<p>北九州スポーツ整骨院には、野球肘で来院される選手が非常に多く、早めの対処が競技復帰の鍵となります。</p>
+
+<h2>野球肘とは？</h2>
+
+<p>野球肘（内側上顆炎）は、ボールを投げる動作を繰り返すことで肘の内側に負担がかかり、炎症や損傷が起きる障害です。</p>
+
+<p>成長期の選手（特に10〜15歳）に多く見られますが、成人アマチュア選手でも発症します。</p>
+
+<h2>主な症状</h2>
+
+<ul>
+<li>投球時・投球後の肘の痛み</li>
+<li>肘の内側を押すと痛み（圧痛）</li>
+<li>肘が完全に伸びない（関節可動域の制限）</li>
+<li>ボールのスピードや制球力の低下</li>
+</ul>
+
+[kitaspo_notice type="danger"]これらの症状がある場合、投球を続けると骨折や剥離骨折につながる恐れがあります。すぐに競技を中止し、専門家に相談してください。[/kitaspo_notice]
+
+<h2>北九州スポーツ整骨院での治療アプローチ</h2>
+
+<p>当院では以下のアプローチで野球肘の治療を行います。</p>
+
+<ol>
+<li><strong>超音波検査（エコー）</strong>による損傷程度の確認</li>
+<li><strong>アイシング・電気治療</strong>で炎症を抑制</li>
+<li><strong>手技療法</strong>で肘周囲の筋バランスを整える</li>
+<li><strong>テーピング</strong>でサポートしながら早期復帰をサポート</li>
+<li><strong>フォーム指導</strong>で再発防止</li>
+</ol>
+
+<h2>自宅でできるセルフケア</h2>
+
+<h3>アイシング（急性期）</h3>
+
+<p>痛みが強い急性期はアイシングが効果的です。</p>
+
+[kitaspo_product name="ケアバッグ 温冷両用アイスパック" price="¥1,980" emoji="🧊" desc="急性期のアイシングから慢性期の温熱ケアまで対応。繰り返し使えてコスパ抜群。" score="4" url="#"]
+
+[kitaspo_btn url="#" text="Amazonで見る" color="blue" icon="🛒"]
+
+<h2>まとめ・当院へのご相談</h2>
+
+<p>野球肘は早期発見・早期治療が最も重要です。「少し痛いだけだから大丈夫」と放置すると、骨の変形につながり長期離脱になってしまいます。</p>
+
+<p>北九州市内でスポーツ障害でお悩みの選手・保護者の方は、ぜひ当院にご相談ください。</p>
+
+[kitaspo_btn url="#" text="北九州スポーツ整骨院に相談する" color="red" icon="📞"]
+        ]]></content:encoded>
+    </item>
+
+    <!-- ===== 記事3: プロテインランキング ===== -->
+    <item>
+        <title>【整骨院おすすめ】プロテインランキング2024年版｜筋肉修復・疲労回復に効果的な選び方</title>
+        <link>https://your-domain.com/protein-ranking-2024/</link>
+        <pubDate>Fri, 19 Apr 2024 09:00:00 +0900</pubDate>
+        <dc:creator><![CDATA[北九州スポーツ整骨院]]></dc:creator>
+        <category domain="category" nicename="supplement"><![CDATA[サプリメント]]></category>
+        <category domain="category" nicename="affiliate"><![CDATA[おすすめ商品]]></category>
+        <wp:post_date><![CDATA[2024-04-19 09:00:00]]></wp:post_date>
+        <wp:post_status><![CDATA[publish]]></wp:post_status>
+        <wp:post_type><![CDATA[post]]></wp:post_type>
+        <wp:post_name><![CDATA[protein-ranking-2024]]></wp:post_name>
+        <excerpt:encoded><![CDATA[整骨院スタッフがおすすめするプロテインランキング2024年版。筋肉修復・疲労回復に効果的な商品を厳選。ホエイプロテイン・ソイプロテインの違いも解説。]]></excerpt:encoded>
+        <content:encoded><![CDATA[
+<p>スポーツをしている方や整骨院に通院されている方から「プロテインって飲んだほうがいいですか？」というご質問をよくいただきます。</p>
+
+<p>結論から言うと、<strong>適切なタンパク質補給は回復を早め、怪我の予防にも役立ちます</strong>。今回は整骨院スタッフ目線でおすすめのプロテインをランキング形式でご紹介します。</p>
+
+<h2>プロテインが整骨院患者さんに必要な理由</h2>
+
+<p>整骨院に来院される方の多くは、筋肉・腱・靭帯の損傷や炎症を抱えています。これらの組織の修復には、材料となるタンパク質が欠かせません。</p>
+
+<p>食事だけで必要量を摂るのは難しいため、プロテインで補うことをお勧めしています。</p>
+
+<h2>プロテインおすすめランキング TOP5</h2>
+
+<h3>🥇 第1位：ザバス ホエイプロテイン100</h3>
+
+[kitaspo_product name="ザバス ホエイプロテイン100 バニラ味 1050g" price="¥4,980" emoji="🥇" desc="日本製で安心。吸収が速く運動後のゴールデンタイムに最適。味も美味しくて続けやすい。" score="5" url="#"]
+
+[kitaspo_btn url="#" text="Amazonで見る" color="gold" icon="🛒"]
+[kitaspo_btn url="#" text="楽天市場で見る" color="red" icon="🛍️"]
+
+<h3>🥈 第2位：マイプロテイン Impact ホエイプロテイン</h3>
+
+[kitaspo_product name="マイプロテイン Impact ホエイプロテイン チョコレート 2.5kg" price="¥4,390" emoji="🥈" desc="コスパ最強のイギリスブランド。フレーバーが豊富で飽きずに続けられる。" score="5" url="#"]
+
+[kitaspo_btn url="#" text="公式サイトで見る" color="blue" icon="🛒"]
+
+<h3>🥉 第3位：DNS ホエイプロテイン100</h3>
+
+[kitaspo_product name="DNS ホエイプロテイン100 1kg" price="¥3,980" emoji="🥉" desc="スポーツ栄養の専門ブランドDNS。品質・味ともに安定感抜群。" score="4" url="#"]
+
+<h2>プロテインの飲み方・タイミング</h2>
+
+<p>プロテインを飲む最適なタイミングは以下の通りです。</p>
+
+<ul>
+<li><strong>運動直後（30分以内）</strong>：筋肉修復のゴールデンタイム。ホエイプロテインが最適</li>
+<li><strong>就寝前</strong>：カゼインプロテインで寝ている間も修復をサポート</li>
+<li><strong>朝食時</strong>：1日のタンパク質摂取量不足を補う</li>
+</ul>
+
+[kitaspo_notice type="info"]1回の推奨量は20〜30g（製品に記載の使用方法に従ってください）。過剰摂取は腎臓に負担をかける場合があります。持病のある方は医師に相談の上ご利用ください。[/kitaspo_notice]
+
+<h2>まとめ</h2>
+
+[kitaspo_review score="4.9" title="プロテイン選び 満足度"]
+
+<p>プロテインは正しく選び、正しく使えば回復を大幅にサポートしてくれます。まずは1ヶ月続けてみてください。身体の変化を実感できるはずです。</p>
+
+<p>サプリメントの選び方・量についてお悩みの場合は、当院スタッフにもお気軽にご相談ください。</p>
+        ]]></content:encoded>
+    </item>
+
+    <!-- ===== 固定ページ: 免責事項 ===== -->
+    <item>
+        <title>免責事項・アフィリエイトについて</title>
+        <link>https://your-domain.com/disclaimer/</link>
+        <pubDate>Mon, 01 Jan 2024 00:00:00 +0900</pubDate>
+        <dc:creator><![CDATA[北九州スポーツ整骨院]]></dc:creator>
+        <wp:post_date><![CDATA[2024-01-01 00:00:00]]></wp:post_date>
+        <wp:post_status><![CDATA[publish]]></wp:post_status>
+        <wp:post_type><![CDATA[page]]></wp:post_type>
+        <wp:post_name><![CDATA[disclaimer]]></wp:post_name>
+        <content:encoded><![CDATA[
+<h2>免責事項</h2>
+
+<p>北九州スポーツ整骨院ブログ（以下「当ブログ」）をご利用いただき、ありがとうございます。当ブログの利用に関して、以下の免責事項をご確認ください。</p>
+
+<h3>医療情報について</h3>
+<p>当ブログに掲載されている情報は、一般的な健康・スポーツに関する情報提供を目的としており、医学的な診断・治療の代替となるものではありません。身体の症状・不調については、必ず専門の医師・柔道整復師にご相談ください。</p>
+
+<h3>商品レビューについて</h3>
+<p>当ブログで紹介している商品は、スタッフが実際に使用または調査したものですが、効果・効能を保証するものではありません。個人差がありますので、ご購入の際は自己責任にてご判断ください。</p>
+
+<h3>掲載情報の正確性について</h3>
+<p>当ブログの情報は執筆時点のものです。商品の価格・仕様・販売状況等は変更される場合があります。最新情報は各販売店・メーカーの公式ページをご確認ください。</p>
+
+<h2>アフィリエイト広告について</h2>
+
+<p>当ブログは、以下のアフィリエイトプログラムに参加しています。</p>
+
+<ul>
+<li>Amazonアソシエイト（Amazonの商品リンクから購入いただいた場合、当ブログに紹介料が発生します）</li>
+<li>楽天アフィリエイト</li>
+<li>A8.net・もしもアフィリエイト等の各ASP</li>
+</ul>
+
+<p>これらのリンクを経由してご購入いただいても、お客様に追加の費用は発生しません。</p>
+
+<p>紹介料は当ブログの運営・コンテンツ制作の費用に充てられています。</p>
+
+<h2>プライバシーポリシー</h2>
+<p>当ブログのプライバシーポリシーは<a href="/privacy-policy/">こちら</a>をご確認ください。</p>
+
+<p>最終更新日：2024年1月1日</p>
+        ]]></content:encoded>
+    </item>
+
+</channel>
+</rss>
