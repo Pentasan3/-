@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<title>北九州スポーツ整骨院 Instagram Reel</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1080px;
+    height: 1920px;
+    overflow: hidden;
+    background: #0a0a0a;
+    font-family: 'IPAGothic', 'Noto Sans JP', sans-serif;
+  }
+
+  /* ===== 背景 ===== */
+  .bg {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(180deg,
+        rgba(0,0,0,0.75) 0%,
+        rgba(0,0,0,0.35) 30%,
+        rgba(0,0,0,0.25) 55%,
+        rgba(0,0,0,0.70) 100%
+      );
+    z-index: 2;
+  }
+
+  /* バスケコート風グラデーション背景 */
+  .court-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 50% 60%, #c47a2a 0%, #a85e1a 30%, #1a0a00 100%);
+    z-index: 1;
+  }
+
+  /* コートラインアニメ */
+  .court-lines {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    opacity: 0.18;
+  }
+  .court-lines svg { width: 100%; height: 100%; }
+
+  /* ===== 全体コンテナ ===== */
+  .container {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 90px 70px 100px;
+  }
+
+  /* ===== ブランド名（上部）===== */
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: slideDown 0.7s ease forwards 0.5s;
+  }
+  .brand-dot {
+    width: 16px; height: 16px;
+    background: #00CFFF;
+    border-radius: 50%;
+    box-shadow: 0 0 14px #00CFFF;
+  }
+  .brand-name {
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.18em;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.8);
+  }
+
+  /* ===== メインコピー（中央）===== */
+  .main-copy {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 0;
+  }
+
+  .headline-wrap {
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+  .headline-1 {
+    font-size: 138px;
+    font-weight: 900;
+    line-height: 1.0;
+    color: #FF2200;
+    text-shadow:
+      0 0 40px rgba(255,34,0,0.6),
+      4px 4px 0px rgba(0,0,0,0.9);
+    opacity: 0;
+    transform: translateX(-80px) skewX(-3deg);
+    animation: slideRight 0.6s cubic-bezier(0.22,1,0.36,1) forwards 1.0s;
+    display: block;
+  }
+  .headline-2 {
+    font-size: 160px;
+    font-weight: 900;
+    line-height: 1.0;
+    color: #ffffff;
+    text-shadow:
+      0 0 50px rgba(255,255,255,0.3),
+      5px 5px 0px rgba(0,0,0,0.95);
+    opacity: 0;
+    transform: translateX(-80px) skewX(-3deg);
+    animation: slideRight 0.6s cubic-bezier(0.22,1,0.36,1) forwards 1.3s;
+    display: block;
+  }
+
+  /* 区切りライン */
+  .divider {
+    width: 0;
+    height: 6px;
+    background: linear-gradient(90deg, #FF2200, #00CFFF);
+    border-radius: 3px;
+    margin: 40px 0;
+    animation: expandLine 0.8s ease forwards 2.0s;
+    box-shadow: 0 0 20px rgba(0, 207, 255, 0.5);
+  }
+
+  /* サブコピー */
+  .sub-copy-wrap {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUp 0.6s ease forwards 2.2s;
+  }
+  .sub-accent {
+    width: 8px;
+    height: 80px;
+    background: #00CFFF;
+    border-radius: 4px;
+    box-shadow: 0 0 20px #00CFFF;
+    flex-shrink: 0;
+  }
+  .sub-copy {
+    font-size: 72px;
+    font-weight: 800;
+    color: #ffffff;
+    text-shadow: 3px 3px 0px rgba(0,0,0,0.9);
+    line-height: 1.2;
+  }
+
+  /* ===== 下部情報 ===== */
+  .bottom-info {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: slideUp 0.7s ease forwards 2.8s;
+  }
+
+  .clinic-name {
+    font-size: 68px;
+    font-weight: 900;
+    color: #ffffff;
+    text-shadow: 3px 3px 0px rgba(0,0,0,0.9);
+    margin-bottom: 28px;
+    letter-spacing: 0.05em;
+  }
+
+  .info-row {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .badge {
+    background: #FF2200;
+    color: #fff;
+    font-size: 42px;
+    font-weight: 800;
+    padding: 14px 36px;
+    border-radius: 10px;
+    box-shadow:
+      0 6px 24px rgba(255,34,0,0.5),
+      inset 0 1px 0 rgba(255,255,255,0.2);
+    animation: pulse 2s ease-in-out infinite 3.5s;
+  }
+
+  .hours-text {
+    font-size: 46px;
+    font-weight: 700;
+    color: #00CFFF;
+    text-shadow: 0 0 20px rgba(0,207,255,0.5);
+  }
+
+  /* ===== パーティクル（光の粒） ===== */
+  .particles {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    pointer-events: none;
+  }
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    animation: float linear infinite;
+  }
+
+  /* ===== エネルギーライン ===== */
+  .energy-lines {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  .eline {
+    position: absolute;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #00CFFF, transparent);
+    opacity: 0;
+    animation: energyLine 3s ease-in-out infinite;
+  }
+
+  /* ===== アニメーション定義 ===== */
+  @keyframes slideDown {
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes slideRight {
+    to { opacity: 1; transform: translateX(0) skewX(0deg); }
+  }
+  @keyframes slideUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes expandLine {
+    to { width: 520px; }
+  }
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); box-shadow: 0 6px 24px rgba(255,34,0,0.5); }
+    50% { transform: scale(1.04); box-shadow: 0 8px 32px rgba(255,34,0,0.8); }
+  }
+  @keyframes float {
+    0% { transform: translateY(0) translateX(0); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(-1920px) translateX(var(--dx)); opacity: 0; }
+  }
+  @keyframes energyLine {
+    0% { left: -100%; opacity: 0; width: 40%; }
+    20% { opacity: 0.6; }
+    80% { opacity: 0.6; }
+    100% { left: 110%; opacity: 0; width: 40%; }
+  }
+
+  /* ===== Ken Burns ズームアニメ（背景） ===== */
+  .court-bg {
+    animation: kenBurns 15s ease-in-out infinite alternate;
+  }
+  @keyframes kenBurns {
+    0% { transform: scale(1.0) translate(0, 0); }
+    100% { transform: scale(1.12) translate(-2%, -2%); }
+  }
+
+  /* ===== フラッシュ演出 ===== */
+  .flash {
+    position: absolute;
+    inset: 0;
+    z-index: 20;
+    background: white;
+    opacity: 0;
+    pointer-events: none;
+    animation: flashAnim 0.4s ease forwards 0.9s;
+  }
+  @keyframes flashAnim {
+    0% { opacity: 0.5; }
+    100% { opacity: 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- 背景 -->
+<div class="court-bg"></div>
+
+<!-- コートライン -->
+<div class="court-lines">
+  <svg viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
+    <!-- センターサークル -->
+    <circle cx="540" cy="960" r="220" fill="none" stroke="white" stroke-width="6"/>
+    <!-- センターライン -->
+    <line x1="0" y1="960" x2="1080" y2="960" stroke="white" stroke-width="5"/>
+    <!-- 外枠 -->
+    <rect x="40" y="60" width="1000" height="1800" fill="none" stroke="white" stroke-width="6" rx="8"/>
+    <!-- ペイントエリア上 -->
+    <rect x="290" y="60" width="500" height="360" fill="none" stroke="white" stroke-width="5"/>
+    <rect x="340" y="60" width="400" height="200" fill="none" stroke="white" stroke-width="4"/>
+    <!-- ペイントエリア下 -->
+    <rect x="290" y="1500" width="500" height="360" fill="none" stroke="white" stroke-width="5"/>
+    <rect x="340" y="1720" width="400" height="200" fill="none" stroke="white" stroke-width="4"/>
+    <!-- スリーポイントライン -->
+    <path d="M 200 1860 L 200 1400 A 370 370 0 0 0 880 1400 L 880 1860" fill="none" stroke="white" stroke-width="5"/>
+    <path d="M 200 60 L 200 520 A 370 370 0 0 1 880 520 L 880 60" fill="none" stroke="white" stroke-width="5"/>
+  </svg>
+</div>
+
+<!-- 暗オーバーレイ -->
+<div class="bg"></div>
+
+<!-- フラッシュ演出 -->
+<div class="flash"></div>
+
+<!-- エネルギーライン -->
+<div class="energy-lines">
+  <div class="eline" style="top:25%; animation-delay:1.5s; width:60%;"></div>
+  <div class="eline" style="top:55%; animation-delay:3.0s; width:45%;"></div>
+  <div class="eline" style="top:75%; animation-delay:5.0s; width:55%;"></div>
+</div>
+
+<!-- パーティクル -->
+<div class="particles" id="particles"></div>
+
+<!-- メインコンテンツ -->
+<div class="container">
+
+  <!-- ブランド -->
+  <div class="brand">
+    <div class="brand-dot"></div>
+    <div class="brand-name">KITAKYUSHU SPORTS SEIKOTSU-IN</div>
+  </div>
+
+  <!-- メインコピー -->
+  <div class="main-copy">
+    <div class="headline-wrap">
+      <span class="headline-1">ケガからの</span>
+    </div>
+    <div class="headline-wrap">
+      <span class="headline-2">早期回復</span>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="sub-copy-wrap">
+      <div class="sub-accent"></div>
+      <div class="sub-copy">練習を休まず<br>競技復帰！</div>
+    </div>
+  </div>
+
+  <!-- 下部情報 -->
+  <div class="bottom-info">
+    <div class="clinic-name">北九州スポーツ整骨院</div>
+    <div class="info-row">
+      <div class="badge">夜9時まで営業</div>
+      <div class="hours-text">営業中 ▶ 予約受付</div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// パーティクル生成
+const container = document.getElementById('particles');
+for (let i = 0; i < 28; i++) {
+  const p = document.createElement('div');
+  p.className = 'particle';
+  const size = Math.random() * 6 + 2;
+  const colors = ['#FF2200','#00CFFF','#ffffff','#FFaa00'];
+  const color = colors[Math.floor(Math.random() * colors.length)];
+  const left = Math.random() * 100;
+  const duration = Math.random() * 8 + 6;
+  const delay = Math.random() * 10;
+  const dx = (Math.random() - 0.5) * 300 + 'px';
+  p.style.cssText = `
+    width:${size}px; height:${size}px;
+    background:${color};
+    left:${left}%;
+    bottom:-10px;
+    --dx:${dx};
+    animation-duration:${duration}s;
+    animation-delay:${delay}s;
+    box-shadow: 0 0 ${size*2}px ${color};
+    opacity:0;
+  `;
+  container.appendChild(p);
+}
+</script>
+
+</body>
+</html>
