@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>北九州スポーツ整骨院 | Instagram フィード広告 1080x1080</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700;900&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --size: 1080px;
+    --red: #E2231A;
+    --red-dark: #C21812;
+    --blue: #1E7BD6;
+    --white: #ffffff;
+    --ink: #111111;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: #222;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 24px;
+  }
+
+  /* 1080x1080 の正方形キャンバス */
+  .ad {
+    position: relative;
+    width: var(--size);
+    height: var(--size);
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+  }
+
+  /* 背景画像（差し替え用） */
+  .ad__bg {
+    position: absolute; inset: 0;
+    background-image: url("images/basketball.jpg");
+    background-size: cover;
+    background-position: center 30%;
+    filter: saturate(0.95);
+  }
+
+  /* 可読性のためのオーバーレイ（左から暗→やや暗） */
+  .ad__overlay {
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(90deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.55) 55%, rgba(0,0,0,0.35) 100%),
+      linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.15) 40%, rgba(0,0,0,0.55) 100%);
+  }
+
+  /* 安全領域（コンテンツ配置） */
+  .ad__inner {
+    position: absolute;
+    inset: 64px 72px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ヘッダー */
+  .eyebrow {
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    letter-spacing: 0.12em;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: var(--red);
+    display: inline-block;
+  }
+
+  /* メインコピー */
+  .headline {
+    margin-top: 110px;
+    font-weight: 900;
+    font-size: 180px;
+    line-height: 1.08;
+    letter-spacing: 0.01em;
+    text-shadow: 0 4px 24px rgba(0,0,0,0.45);
+  }
+  .headline .accent { color: var(--red); }
+
+  /* サブコピー（青バー） */
+  .sub {
+    margin-top: 52px;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 1.2;
+    text-shadow: 0 3px 14px rgba(0,0,0,0.4);
+  }
+  .sub::before {
+    content: "";
+    width: 10px; height: 64px;
+    background: var(--blue);
+    border-radius: 2px;
+  }
+
+  /* フッター（赤バー + 店名 + バッジ） */
+  .footer {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+  }
+  .footer__name {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    font-weight: 900;
+    font-size: 62px;
+    letter-spacing: 0.02em;
+    text-shadow: 0 3px 14px rgba(0,0,0,0.4);
+  }
+  .footer__name::before {
+    content: "";
+    width: 10px; height: 74px;
+    background: var(--red);
+    border-radius: 2px;
+  }
+  .badge {
+    margin-left: auto;
+    background: var(--red);
+    color: #fff;
+    font-weight: 700;
+    font-size: 32px;
+    padding: 16px 22px;
+    border-radius: 4px;
+    letter-spacing: 0.05em;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+    white-space: nowrap;
+  }
+</style>
+</head>
+<body>
+  <div class="ad" role="img" aria-label="北九州スポーツ整骨院 インスタ広告">
+    <div class="ad__bg"></div>
+    <div class="ad__overlay"></div>
+
+    <div class="ad__inner">
+      <div class="eyebrow">KITAKYUSHU SPORTS SEIKOTSU-IN</div>
+
+      <h1 class="headline">
+        <span class="accent">ケガ</span>からの<br>
+        早期回復
+      </h1>
+
+      <p class="sub">練習を休まず競技復帰！</p>
+
+      <div class="footer">
+        <div class="footer__name">北九州スポーツ整骨院</div>
+        <div class="badge">夜9時まで営業</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
