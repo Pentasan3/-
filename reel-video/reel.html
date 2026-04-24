@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>北九州スポーツ整骨院 リール</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700;900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    width: 1080px;
+    height: 1920px;
+    overflow: hidden;
+    background: #000;
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+
+  .stage {
+    position: relative;
+    width: 1080px;
+    height: 1920px;
+    overflow: hidden;
+    background: #0a0a0a;
+  }
+
+  /* ------- BACKGROUND ------- */
+  /* If you drop a file named basketball.jpg in this folder, it will be used as the background. */
+  .bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(0,0,0,0.55) 0%,
+        rgba(0,0,0,0.25) 35%,
+        rgba(0,0,0,0.55) 70%,
+        rgba(0,0,0,0.85) 100%
+      ),
+      url('basketball.jpg');
+    background-size: cover;
+    background-position: center;
+    animation: kenburns 12s ease-out forwards;
+  }
+
+  /* Fallback: painterly basketball-gym gradient if basketball.jpg is missing */
+  .bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 30% 40%, rgba(160, 40, 40, 0.55) 0%, transparent 55%),
+      radial-gradient(ellipse at 70% 70%, rgba(90, 55, 30, 0.75) 0%, transparent 60%),
+      linear-gradient(145deg, #2a1410 0%, #1a0a08 40%, #0a0605 100%);
+    z-index: -1;
+  }
+
+  @keyframes kenburns {
+    0%   { transform: scale(1.0); }
+    100% { transform: scale(1.12); }
+  }
+
+  /* ------- TOP BANNER ------- */
+  .top-banner {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(10, 10, 10, 0.88);
+    padding: 34px 70px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    opacity: 0;
+    animation: fadeSlideDown 0.8s ease-out 0.2s forwards;
+  }
+  .top-banner span {
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 70px;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+
+  /* ------- CENTER COPY ------- */
+  .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+  }
+
+  .line1 {
+    font-weight: 900;
+    font-size: 150px;
+    color: #ffffff;
+    letter-spacing: 0.04em;
+    text-shadow: 0 6px 18px rgba(0,0,0,0.8);
+    opacity: 0;
+    animation: fadeUp 0.9s ease-out 1.8s forwards;
+    margin-bottom: 20px;
+  }
+  .line1 .red {
+    color: #e2192a;
+    display: inline-block;
+    animation: pop 0.6s ease-out 2.2s both;
+  }
+
+  .line2 {
+    font-weight: 900;
+    font-size: 150px;
+    color: #ffffff;
+    letter-spacing: 0.04em;
+    text-shadow: 0 6px 18px rgba(0,0,0,0.8);
+    opacity: 0;
+    animation: fadeUp 0.9s ease-out 3.4s forwards;
+  }
+
+  /* ------- BOTTOM ------- */
+  .bottom {
+    position: absolute;
+    bottom: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    opacity: 0;
+    animation: fadeUp 0.9s ease-out 5.0s forwards;
+  }
+  .bottom .bar {
+    width: 8px;
+    height: 56px;
+    background: #e2192a;
+  }
+  .bottom span {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 48px;
+    letter-spacing: 0.05em;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.8);
+    white-space: nowrap;
+  }
+
+  /* ------- CTA PULSE (final beats) ------- */
+  .pulse-ring {
+    position: absolute;
+    bottom: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 900px;
+    height: 120px;
+    border: 3px solid rgba(226, 25, 42, 0);
+    border-radius: 80px;
+    pointer-events: none;
+    animation: pulseRing 1.4s ease-out 7s infinite;
+  }
+
+  /* ------- KEYFRAMES ------- */
+  @keyframes fadeSlideDown {
+    from { opacity: 0; transform: translate(-50%, -30px); }
+    to   { opacity: 1; transform: translate(-50%, 0); }
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes pop {
+    0%   { transform: scale(0.6); opacity: 0; }
+    60%  { transform: scale(1.15); opacity: 1; }
+    100% { transform: scale(1.0); opacity: 1; }
+  }
+  @keyframes pulseRing {
+    0%   { border-color: rgba(226, 25, 42, 0.0); transform: translateX(-50%) scale(0.95); }
+    30%  { border-color: rgba(226, 25, 42, 0.9); }
+    100% { border-color: rgba(226, 25, 42, 0.0); transform: translateX(-50%) scale(1.05); }
+  }
+</style>
+</head>
+<body>
+  <div class="stage">
+    <div class="bg"></div>
+
+    <div class="top-banner">
+      <span>北九州スポーツ整骨院</span>
+    </div>
+
+    <div class="center">
+      <div class="line1"><span class="red">ケガ</span>からの</div>
+      <div class="line2">早期回復</div>
+    </div>
+
+    <div class="bottom">
+      <div class="bar"></div>
+      <span>練習を休まず競技復帰！</span>
+    </div>
+
+    <div class="pulse-ring"></div>
+  </div>
+</body>
+</html>
