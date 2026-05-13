@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>クマガチ LINEスタンプ プレビュー</title>
+<style>
+  body { font-family: 'Noto Sans CJK JP', sans-serif; background: #fafafa; margin: 0; padding: 32px; color: #1a1a1a; }
+  h1 { font-size: 28px; margin: 0 0 4px; }
+  p.lead { color: #666; margin: 0 0 24px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+  .card { background: white; border: 1px solid #e5e5e5; border-radius: 12px; padding: 12px; text-align: center; }
+  .card img { width: 100%; height: auto; image-rendering: -webkit-optimize-contrast; }
+  .card .name { margin-top: 8px; font-size: 13px; color: #444; }
+  .meta { margin-top: 32px; padding: 16px; background: #fff; border: 1px solid #e5e5e5; border-radius: 12px; }
+  .meta h2 { font-size: 16px; margin: 0 0 8px; }
+  .meta ul { margin: 0; padding-left: 20px; }
+  .meta li { font-size: 13px; line-height: 1.7; }
+  .row { display: flex; gap: 24px; align-items: center; margin-bottom: 24px; flex-wrap: wrap; }
+  .hero { background: white; border: 1px solid #e5e5e5; border-radius: 12px; padding: 16px; }
+</style>
+</head>
+<body>
+  <h1>クマガチ LINEスタンプ</h1>
+  <p class="lead">手描きクマガチを8シーン分、LINEスタンプ仕様（370×320 PNG / 透過背景）で書き出した一覧です。</p>
+
+  <div class="row">
+    <div class="hero">
+      <div style="font-size:12px;color:#666">メイン画像 (240×240)</div>
+      <img src="png/main.png" width="180" alt="main">
+    </div>
+    <div class="hero">
+      <div style="font-size:12px;color:#666">タブ画像 (96×74)</div>
+      <img src="png/tab.png" width="120" alt="tab">
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card"><img src="png/01_haru.png" alt="春"><div class="name">01 クマガチの春</div></div>
+    <div class="card"><img src="png/02_tsuyu.png" alt="梅雨"><div class="name">02 クマガチの梅雨</div></div>
+    <div class="card"><img src="png/03_natsu.png" alt="夏"><div class="name">03 クマガチの夏</div></div>
+    <div class="card"><img src="png/04_aki.png" alt="秋"><div class="name">04 クマガチの秋</div></div>
+    <div class="card"><img src="png/05_fuyu.png" alt="冬"><div class="name">05 クマガチの冬</div></div>
+    <div class="card"><img src="png/06_christmas.png" alt="クリスマス"><div class="name">06 クマガチのクリスマス</div></div>
+    <div class="card"><img src="png/07_nenmatsu.png" alt="年末"><div class="name">07 クマガチの年末</div></div>
+    <div class="card"><img src="png/08_oshougatsu.png" alt="お正月"><div class="name">08 クマガチのお正月</div></div>
+  </div>
+
+  <div class="meta">
+    <h2>仕様メモ</h2>
+    <ul>
+      <li>スタンプ画像: 370×320 PNG, RGBA（透過背景）</li>
+      <li>メイン画像: 240×240 PNG</li>
+      <li>タブ画像: 96×74 PNG</li>
+      <li>すべて <code>line-stamps/build.py</code> から再生成可能（<code>python3 line-stamps/build.py</code>）</li>
+      <li>SVGソースは <code>line-stamps/svg/</code> に出力</li>
+    </ul>
+  </div>
+</body>
+</html>
