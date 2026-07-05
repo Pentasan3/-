@@ -17,11 +17,13 @@ get_header();
             </h1>
             <p class="hero-lead">
                 北九州スポーツ整骨院は、部活動に励む学生からトップアスリート、日常の痛みに悩む方まで。
-                「早く治して、早く戻る」ためのスポーツ障害専門の整骨院です。
+                施術からコンディショニング・ケガの予防までを一貫して行う、
+                北九州で唯一の「ケアステーション（Care &amp; Conditioning）」です。
             </p>
             <ul class="hero-points">
                 <li>✔ JR南小倉駅 徒歩1分</li>
                 <li>✔ 動作チェックスペース完備</li>
+                <li>✔ 骨盤矯正で根本改善</li>
                 <li>✔ 酸素カプセルで疲労回復</li>
                 <li>✔ 各種保険取扱</li>
             </ul>
@@ -73,8 +75,8 @@ get_header();
                 $reasons = [
                     [ 'スポーツ障害専門・施術歴20年', '院長自身がバスケットボール・格闘技の経験者。選手の「早く復帰したい」気持ちに寄り添った施術を20年続けています。' ],
                     [ '実際の動きを見て施術方針を決定', '院内に軽く走ったりスイングを確認できるスペースを完備。競技の動作を実際に見ることで、痛みの原因を的確に特定します。' ],
-                    [ '「早く治す」ことにこだわる施術', 'テーピングで保護するだけの応急処置では終わらせません。早期回復と再発予防を見据えた施術で、最短の競技復帰をサポートします。' ],
-                    [ '酸素カプセルで疲労回復もサポート', '試合前後のコンディショニングや慢性疲労に。問診のうえ、お一人おひとりに合った時間・気圧で初めての方も安心してご利用いただけます。' ],
+                    [ '「早く治す」×「繰り返さない」施術', 'テーピングで保護するだけの応急処置では終わらせません。痛みを繰り返す方には骨盤矯正で身体の土台から整え、早期回復と再発予防の両方を目指します。' ],
+                    [ '施術後のコンディショニングまで一貫サポート', '酸素カプセル・スポーツストレッチ・体操セミナーまで。治して終わりではなく、ケガをしない身体づくりまで支える「ケアステーション」です。' ],
                 ];
                 foreach ( $reasons as $i => $r ) :
                     ?>
@@ -106,6 +108,13 @@ get_header();
                     </div>
                 </div>
                 <div class="menu-card fade-in">
+                    <div class="menu-card-head"><span class="icon">🦴</span>骨盤矯正</div>
+                    <div class="menu-card-body">
+                        <p>痛みを繰り返す方は、まず身体の土台である骨盤から。立ち方・姿勢を確認し、痛みの根本改善を目指します。</p>
+                        <div class="menu-price">料金はお問い合わせください</div>
+                    </div>
+                </div>
+                <div class="menu-card fade-in">
                     <div class="menu-card-head"><span class="icon">🤸</span>スポーツストレッチ</div>
                     <div class="menu-card-body">
                         <p>肩甲骨と股関節に焦点を当てたマンツーマンのストレッチ。競技能力の向上とケガの予防に効果的です。</p>
@@ -115,7 +124,7 @@ get_header();
                 <div class="menu-card fade-in">
                     <div class="menu-card-head"><span class="icon">🛌</span>酸素カプセル</div>
                     <div class="menu-card-body">
-                        <p>疲労回復・ケガの回復促進・コンディショニングに。初めての方にも事前説明をしっかり行います。</p>
+                        <p>丁寧な問診でお一人おひとりに合った利用法をご提案。入る前の体操とカプセル内の呼吸体操で効果を最大限に引き出します。記録更新・睡眠の質改善・慢性疲労の解消に。</p>
                         <div class="menu-price">料金はお問い合わせください</div>
                     </div>
                 </div>
@@ -128,6 +137,49 @@ get_header();
                 </div>
             </div>
             <p class="section-note">※ 症状により施術内容・料金が異なる場合があります。詳しくはお気軽にお問い合わせください。</p>
+        </div>
+    </section>
+
+    <!-- ===== 患者様の声 ===== -->
+    <section id="voices" class="section">
+        <div class="container">
+            <div class="section-head fade-in">
+                <div class="section-label">Voices</div>
+                <h2 class="section-title">患者様の声</h2>
+            </div>
+            <div class="voice-grid">
+                <?php
+                $voices = [
+                    [ '学生アスリート', '繰り返していた痛みを骨盤から根本的に診てもらい、安心して部活に復帰できました。復帰後のケアまで相談できるのが心強いです。' ],
+                    [ 'ランナー', 'レース前後のコンディション調整に酸素カプセルを活用しています。疲労の抜け方が違い、記録更新にもつながりました。' ],
+                    [ '会社員', '慢性的な全身の倦怠感に悩んでいましたが、通ううちに睡眠の質が良くなり、毎日の体調が安定してきました。' ],
+                ];
+                foreach ( $voices as $v ) :
+                    ?>
+                    <div class="voice-card fade-in">
+                        <p class="voice-text"><?php echo esc_html( $v[1] ); ?></p>
+                        <div class="voice-who"><span class="tag"><?php echo esc_html( $v[0] ); ?></span></div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+            <p class="section-note">※ 患者様よりいただいた声を要約して掲載しています。効果には個人差があります。</p>
+        </div>
+    </section>
+
+    <!-- ===== セミナー・体操教室 ===== -->
+    <section id="seminar" class="section alt">
+        <div class="container">
+            <div class="seminar-box fade-in">
+                <div class="seminar-icon" aria-hidden="true">🧘</div>
+                <div class="seminar-body">
+                    <h3>体操セミナー・教室を定期開催中</h3>
+                    <p>
+                        ケガの予防や日常生活動作・競技能力の向上を目指す体操セミナー・教室を院内で定期開催しています。
+                        開催日程・お申し込みはLINE・ブログ・Instagramでお知らせしています。
+                    </p>
+                    <a class="btn-seminar" href="<?php echo esc_url( kitaspo_home_info( 'line_url' ) ); ?>" target="_blank" rel="noopener">LINEで日程を確認する</a>
+                </div>
+            </div>
         </div>
     </section>
 
