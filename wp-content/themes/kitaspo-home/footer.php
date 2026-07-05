@@ -7,6 +7,7 @@
             <div class="footer-sns">
                 <a href="<?php echo esc_url( kitaspo_home_info( 'line_url' ) ); ?>" target="_blank" rel="noopener">LINE</a>
                 <a href="<?php echo esc_url( kitaspo_home_info( 'insta_url' ) ); ?>" target="_blank" rel="noopener">Instagram</a>
+                <a href="<?php echo esc_url( kitaspo_home_info( 'youtube_url' ) ); ?>" target="_blank" rel="noopener">YouTube</a>
                 <a href="<?php echo esc_url( kitaspo_home_info( 'blog_url' ) ); ?>" target="_blank" rel="noopener">ブログ</a>
             </div>
         </div>

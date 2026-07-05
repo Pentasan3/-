@@ -311,10 +311,12 @@ ul, ol { list-style: none; }
 .seminar-body { position: relative; z-index: 1; }
 .seminar-body h3 { font-size: 1.2rem; font-weight: 900; margin-bottom: 10px; }
 .seminar-body p { font-size: 0.9rem; color: #cfdcec; margin-bottom: 16px; }
+.seminar-btns { display: flex; flex-wrap: wrap; gap: 12px; }
 .seminar-body .btn-seminar {
     display: inline-block; background: var(--orange); color: #fff;
     font-weight: 800; font-size: 0.9rem; padding: 11px 28px; border-radius: 999px;
 }
+.seminar-body .btn-seminar.yt { background: #e62117; }
 
 /* ===== お知らせ ===== */
 .news-list li { border-bottom: 1px dashed var(--border); }
@@ -426,6 +428,7 @@ ul, ol { list-style: none; }
     .symptom-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
     .reason-list, .menu-list, .access-grid, .voice-grid { grid-template-columns: 1fr; }
     .director-box, .seminar-box { flex-direction: column; text-align: center; padding: 28px 22px; }
+    .seminar-btns { justify-content: center; }
     .btn-cta { min-width: 0; flex: 1; padding: 12px 16px; }
     .btn-cta .big { font-size: 1.1rem; }
     .mobile-cta { display: grid; }
